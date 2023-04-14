@@ -1,4 +1,4 @@
-class GetTestMail
+class EmailBox
   attr_accessor :email_address, :expires_at, :message
 
   def initialize(email_address:, expires_at:, message: nil)
