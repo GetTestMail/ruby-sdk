@@ -33,16 +33,19 @@ api_key = 'your-api-key'
 client = GetTestMailClient.new(api_key)
 ```
 
-Creating a New GetTestMail Instance
+### Creating a New GetTestMail Instance
 To create a new GetTestMail instance, call the create_new method on the client:
 
 ```ruby
 get_test_mail = client.create_new
 puts "Email address: #{get_test_mail.email_address}"
 puts "Expires at: #{get_test_mail.expires_at}"
-# Waiting for a Message
-# To wait for a message, call the wait_for_message method with the email address:
+```
 
+### Waiting for a Message
+To wait for a message, call the wait_for_message method with the email address:
+
+```ruby
 message = client.wait_for_message(get_test_mail.email_address)
 puts "Message from: #{message.from}"
 puts "Message subject: #{message.subject}"
