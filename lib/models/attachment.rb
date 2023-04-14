@@ -1,9 +1,11 @@
 class Attachment
   attr_accessor :filename, :mime_type, :content
 
-  def initialize(filename:, mime_type:, content:)
-    @filename = filename
-    @mime_type = mime_type
-    @content = content
+  def initialize(json)
+    json.each { |key, value| instance_variable_set("@#{key}", value) }
+  end
+
+  def to_s
+    "Name: #{filename}, Mime-Type: #{mime_type}"
   end
 end
