@@ -1,6 +1,6 @@
 # ruby-sdk
 
-A Ruby client for interacting with the GetTestMail API, which allows you to create disposable email addresses for testing purposes.
+A Ruby client for interacting with the GetTestMail API, which provides a simple way to create temporary email addresses and receive messages sent to them.
 
 ## Installation
 
@@ -24,7 +24,7 @@ $ gem install gettestmail
 ## Usage
 
 Creating a New Client
-To create a new GetTestMail API client, you need to instantiate the GetTestMailClient class with your API key:
+To create a new GetTestMail API client, you need to instantiate the GetTestMailClient class with your API key. To get an API key, sign up for a free [account](https://gettestmail.com).
 
 ```ruby
 require 'gettestmailclient'
@@ -58,34 +58,30 @@ puts "Message: #{message}"
 
 The GetTestMail model represents a disposable email address. It has the following attributes:
 
-```
-email_address: The disposable email address.
-expires_at: The expiration time of the email address.
-```
+* emailAddress - The email address
+* expiresAt - The time at which the email address will expire
+* message - The message received by the email address
 
 ### Message
 
-The Message model represents an email message. It has the following attributes:
+The Message received by the email address. It has the following attributes:
 
-```
-id: The unique identifier of the message.
-from: The sender's email address.
-to: The recipient's email address.
-subject: The subject of the email.
-text: The plain text version of the email.
-html: The HTML version of the email.
-attachments: An array of Attachment objects.
-```
+* id - The id of the message
+* from - The sender of the message
+* to - The recipient of the message
+* subject - The subject of the message
+* text - Text representation of the message
+* html - HTML representation of the message
+* attachments - List of attachments
 
 ### Attachment
 
-The Attachment model represents an email attachment. It has the following attributes:
+The Attachment received by the email address. It has the following attributes:
 
-```
-filename: The name of the attached file.
-mime_type: The MIME type of the attached file.
-content: The content of the attached file.
-```
+* filename - The filename of the attachment
+* mimeType - The mime type of the attachment
+* content - The content of the attachment
+
 
 ## Error Handling
 
