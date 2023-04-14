@@ -23,7 +23,7 @@ $ gem install gettestmail
 
 ## Usage
 
-Creating a New Client
+### Creating a New Client
 To create a new GetTestMail API client, you need to instantiate the GetTestMailClient class with your API key. To get an API key, sign up for a free [account](https://gettestmail.com).
 
 ```ruby
