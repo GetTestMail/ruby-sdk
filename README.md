@@ -46,7 +46,7 @@ puts "Expires at: #{get_test_mail.expires_at}"
 To wait for a message, call the wait_for_message method with the email address:
 
 ```ruby
-message = client.wait_for_message(get_test_mail.email_address)
+message = client.wait_for_message(get_test_mail.id)
 puts "Message from: #{message.from}"
 puts "Message subject: #{message.subject}"
 puts "Message: #{message}"
@@ -58,6 +58,7 @@ puts "Message: #{message}"
 
 The GetTestMail model represents a disposable email address. It has the following attributes:
 
+* id - The id of the email address
 * emailAddress - The email address
 * expiresAt - The time at which the email address will expire
 * message - The message received by the email address

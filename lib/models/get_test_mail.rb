@@ -2,7 +2,7 @@ require_relative 'base_dto'
 require_relative 'message'
 
 class GetTestMail < BaseDTO
-  attr_accessor :emailAddress, :expiresAt, :message
+  attr_accessor :id, :emailAddress, :expiresAt, :message
 
   def initialize(json)
     super(json)
