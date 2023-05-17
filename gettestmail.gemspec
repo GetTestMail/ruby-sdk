@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'gettestmail'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.summary     = 'A Ruby client SDK for the GetTestMail API'
   s.description = 'A Ruby cleint SDK so you can easily integrate GetTestMail into your Ruby application. GetTestMail is a service that allows you to easily create email addresses that you can use to test your application.'
   s.authors     = ['Bobby Donchev']
